@@ -1,15 +1,15 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: my-jenkins
+  name: mynginx
   namespace: default
 spec:
   template:
     metadata:
       labels:
-        app: my-jenkins
+        app: mynginx
     spec:
       containers:
-      - image: dongyali521521/my-jenkins:<BUILD_TAG>
+      - image: dongyali521521/mynginx:<BUILD_TAG>
         imagePullPolicy: IfNotPresent
-        name: my-jenkins
+        name: mynginx
