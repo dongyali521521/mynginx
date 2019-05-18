@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: my-jenkins
+  namespace: default
+spec:
+  template:
+    metadata:
+      labels:
+        app: my-jenkins
+    spec:
+      containers:
+      - image: dongyali521521/my-jenkins:<BUILD_TAG>
+        imagePullPolicy: IfNotPresent
+        name: my-jenkins
